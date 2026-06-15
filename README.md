@@ -20,12 +20,17 @@ This app lets you manage employees and departments for your organization. You ca
 
 ### Running the Project
 
-It's super simple - just three steps:
+It's super simple - just a few steps:
 
-1. **Open your terminal** and navigate to the project folder:
-   ```bash
-   cd "src/EmployeeManagement.API"
+1. **Update the database connection string** in `src/EmployeeManagement.API/appsettings.json` to match your SQL Server instance:
+
+   ```json
+   "ConnectionStrings": {
+     "DefaultConnection": "Server=YOUR_SERVER\\SQLEXPRESS;Database=EmployeeManagementDB;Trusted_Connection=true;TrustServerCertificate=true;"
+   }
    ```
+
+   Replace `YOUR_SERVER\\SQLEXPRESS` with your machine name and SQL Server instance (for example, `localhost\\SQLEXPRESS` or `.\SQLEXPRESS`).
 
 2. **Start the application:**
    ```bash
